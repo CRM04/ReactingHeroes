@@ -3,7 +3,12 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        navBar: "#820306",
+        loginBtn: "#820306"
+      }
+    },
   },
   variants: {
     extend: {},
