@@ -4,7 +4,6 @@ import HeroCard from '../heroes/HeroCard';
 import queryString from 'query-string';
 import { useLocation } from 'react-router';
 import { getHerosByName } from '../../selector/getHerosByName';
-import { heroes } from '../../data/heroes';
 
 export const SearchScreen = ({ history }) => {
     

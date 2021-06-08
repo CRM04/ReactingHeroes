@@ -1,23 +1,36 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { useHistory } from "react-router-dom";
 import { Transition } from "@headlessui/react";
-import {  NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { AuthContext } from '../../auth/AuthContext';
+import { types } from '../../types/types';
 
 export const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
+    const { user, dispatch } = useContext(AuthContext);
+    const history = useHistory();
+
+    const handleLogOut = () => {
+        dispatch({
+            type: types.logout
+        });
+        history.replace("/login");
+    }
+
     return (
         <div className="">
             <nav className="bg-navBar shadow-2xl" >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-                    <div className="flex items-center justify-between h-16">
+                    <div className="flex sm:justify-between lg:justify-start">
                         <div className="flex items-center">
-                            <div className="flex-shrink-0">
+                            <div className="">
                                 <img
                                     className="h-14 w-auto"
                                     src="../assets/heroes/logo.png"
                                     alt="Workflow"
                                 />
                             </div>
-                            <div className="hidden md:block">
+                            <div className="hidden md:flex justify-between">
                                 <div className="ml-10 flex items-baseline space-x-4">
                                     <NavLink
                                         activeClassName="bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -45,15 +58,17 @@ export const Navbar = () => {
                                     >
                                         Search
                                     </NavLink>
-
-                                    <NavLink
-                                        activeClassName="bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                                </div>
+                                <div className=" flex items-baseline space-x-4">
+                                    <p className="hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">
+                                        {user.name}
+                                    </p>
+                                    <button
                                         className="hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
-                                        exact
-                                        to="/login"
+                                        onClick={handleLogOut}
                                     >
-                                        Log Out
-                                    </NavLink>
+                                        Logout
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -61,7 +76,7 @@ export const Navbar = () => {
                             <button
                                 onClick={() => setOpen(!isOpen)}
                                 type="button"
-                                className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                                className="inline-flex items-center justify-center pt-1 pb-1 pr-2 pl-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                                 aria-controls="mobile-menu"
                                 aria-expanded="false"
                             >
@@ -115,35 +130,41 @@ export const Navbar = () => {
                     {(ref) => (
                         <div className="md:hidden" id="mobile-menu">
                             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                                <a
-                                    href="/#"
-                                    className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
+                                <NavLink
+                                    activeClassName="bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                                    className="hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                                    exact
+                                    to="/marvel"
                                 >
-                                    Dashboard</a>
+                                    Marvel
+                                    </NavLink>
 
-                                <a
-                                    href="/#"
-                                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                                <NavLink
+                                    activeClassName="bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                                    className="hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                                    exact
+                                    to="/dc"
                                 >
-                                    Team</a>
+                                    DC
+                                    </NavLink>
 
-                                <a
-                                    href="/#"
-                                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                                <NavLink
+                                    activeClassName="bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                                    className="hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                                    exact
+                                    to="/search"
                                 >
-                                    Projects</a>
-
-                                <a
-                                    href="/#"
-                                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                                    Search
+                                    </NavLink>
+                                <button
+                                    className="hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                                    onClick={handleLogOut}
                                 >
-                                    Calendar</a>
-
-                                <a
-                                    href="/#"
-                                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                                >
-                                    Reports</a>
+                                    Logout
+                                    </button>
+                                <p className="hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">
+                                    {user.name}
+                                </p>
                             </div>
                         </div>
                     )}
@@ -163,6 +184,6 @@ export const Navbar = () => {
                     </div>
                 </div>
             </main> */}
-        </div>
+        </div >
     )
 }
