@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoginScreen/> testsuit should match snapshot 1`] = `
+<div
+  className="bg-gray-200 h-screen flex justify-center items-center"
+>
+  <div
+    className="bg-white absolute rounded shadow md:w-1/2 lg:w-1/4 sm:w-80"
+  >
+    <div
+      className="flex justify-around"
+    >
+      <div
+        className=" border-b-2 p-2 m-3 border-loginBtn"
+      >
+        <span
+          className="text-gray-00 font-semibold cursor-pointer uppercase"
+        >
+          LOG IN
+        </span>
+      </div>
+      <div
+        className="border-b-2 p-2 m-3 border-transparent"
+      >
+        <span
+          className="text-gray-500 p-2 m-3 font-semibold cursor-pointer uppercase"
+        >
+          SIGN In
+        </span>
+      </div>
+    </div>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="grid grid-cols-1 m-10"
+      >
+        <div
+          className="flex justify-center items-center"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-user-circle fa-w-16 text-gray-400 text-8xl mb-4 mt-4"
+            data-icon="user-circle"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 496 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </div>
+        <input
+          className="bg-gray-100 rounded m-2 p-2 hover:shadow focus:outline-none focus:ring-2 focus:ring-loginBtn focus:border-transparent"
+          name="usuario"
+          onChange={[Function]}
+          placeholder="Usuario"
+          required={true}
+          type="text"
+          value=""
+        />
+        <button
+          className="border-loginBtn shadow-xl p-2 m-2 border-2 rounded bg-loginBtn text-white hover:bg-red-700 hover:border-red-700 focus:border-transparent"
+          type="submit"
+        >
+          Iniciar sesion
+        </button>
+      </div>
+      <div
+        className="bg-gray-100 relative p-8 flex justify-center items-center"
+      >
+        <span
+          className="text-gray-400 font-semibold cursor-pointer hover:text-loginBtn"
+        >
+          Olvidaste tu contraseña ?
+        </span>
+      </div>
+    </form>
+  </div>
+</div>
+`;

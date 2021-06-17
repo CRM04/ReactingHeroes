@@ -13,7 +13,7 @@ const LoginScreen = ({ history }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const userState = { name: usuario };
-        console.log(userState);
+        // console.log(userState);
         localStorage.setItem('user', JSON.stringify(userState))
         dispatch({
             type: types.login,

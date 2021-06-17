@@ -60,10 +60,11 @@ export const Navbar = () => {
                                     </NavLink>
                                 </div>
                                 <div className=" flex items-baseline space-x-4">
-                                    <p className="hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">
+                                    <p className="hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium" id="userNameNav">
                                         {user.name}
                                     </p>
                                     <button
+                                        id="logout"
                                         className="hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
                                         onClick={handleLogOut}
                                     >
@@ -162,7 +163,7 @@ export const Navbar = () => {
                                 >
                                     Logout
                                     </button>
-                                <p className="hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">
+                                <p className="hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium" id="username">
                                     {user.name}
                                 </p>
                             </div>

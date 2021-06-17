@@ -1,0 +1,257 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchScreen/> testsuit  should not show the hero if query params is right 1`] = `
+<div>
+  <div
+    className="flex justify-center"
+  >
+    <div
+      className="shadow-md w-1/2 rounded"
+    >
+      <div
+        className="bg-gray-700 rounded-t p-2"
+      >
+        <h4
+          className="text-xl text-semibold uppercase text-white"
+        >
+          Search a hero
+        </h4>
+      </div>
+      <div
+        className="mb-2"
+      >
+        <form
+          onSubmit={[Function]}
+        >
+          <div
+            className="p-2 m-2"
+          >
+            <input
+              autoComplete="off"
+              className="border rounded p-2 w-full bg-gray-100 focus-within:border-red-700 hover:border-red-700"
+              name="filter"
+              onChange={[Function]}
+              placeholder="Type hero's name here"
+              type="text"
+              value="bat23"
+            />
+          </div>
+          <div
+            className="flex justify-center"
+          >
+            <button
+              className="border p-2 rounded border-red-800 text-red-800 hover:bg-red-600 hover:text-white"
+              type="submit"
+            >
+               Search 
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-10"
+  >
+    <h4
+      className="text-xl text-semibold uppercase text-red-800"
+    >
+      Results... for 
+      bat23
+    </h4>
+    <div
+      className="flex justify-around flex-wrap content-start items-start animate__animated animate__fadeIn"
+    >
+      <div
+        className="bg-yellow-700 uppercase p-2 rounded text-white w-1/2 text-center "
+      >
+        No heroes found
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<SearchScreen/> testsuit  should show the default  1`] = `
+<div>
+  <div
+    className="flex justify-center"
+  >
+    <div
+      className="shadow-md w-1/2 rounded"
+    >
+      <div
+        className="bg-gray-700 rounded-t p-2"
+      >
+        <h4
+          className="text-xl text-semibold uppercase text-white"
+        >
+          Search a hero
+        </h4>
+      </div>
+      <div
+        className="mb-2"
+      >
+        <form
+          onSubmit={[Function]}
+        >
+          <div
+            className="p-2 m-2"
+          >
+            <input
+              autoComplete="off"
+              className="border rounded p-2 w-full bg-gray-100 focus-within:border-red-700 hover:border-red-700"
+              name="filter"
+              onChange={[Function]}
+              placeholder="Type hero's name here"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            className="flex justify-center"
+          >
+            <button
+              className="border p-2 rounded border-red-800 text-red-800 hover:bg-red-600 hover:text-white"
+              type="submit"
+            >
+               Search 
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-10"
+  >
+    <h4
+      className="text-xl text-semibold uppercase text-red-800"
+    >
+      Results... for 
+    </h4>
+    <div
+      className="flex justify-around flex-wrap content-start items-start animate__animated animate__fadeIn"
+    >
+      <div
+        className="bg-yellow-700 uppercase p-2 rounded text-white w-1/2 text-center "
+      >
+        No heroes found
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<SearchScreen/> testsuit  should show the hero if query params is right 1`] = `
+<div>
+  <div
+    className="flex justify-center"
+  >
+    <div
+      className="shadow-md w-1/2 rounded"
+    >
+      <div
+        className="bg-gray-700 rounded-t p-2"
+      >
+        <h4
+          className="text-xl text-semibold uppercase text-white"
+        >
+          Search a hero
+        </h4>
+      </div>
+      <div
+        className="mb-2"
+      >
+        <form
+          onSubmit={[Function]}
+        >
+          <div
+            className="p-2 m-2"
+          >
+            <input
+              autoComplete="off"
+              className="border rounded p-2 w-full bg-gray-100 focus-within:border-red-700 hover:border-red-700"
+              name="filter"
+              onChange={[Function]}
+              placeholder="Type hero's name here"
+              type="text"
+              value="bat"
+            />
+          </div>
+          <div
+            className="flex justify-center"
+          >
+            <button
+              className="border p-2 rounded border-red-800 text-red-800 hover:bg-red-600 hover:text-white"
+              type="submit"
+            >
+               Search 
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-10"
+  >
+    <h4
+      className="text-xl text-semibold uppercase text-red-800"
+    >
+      Results... for 
+      bat
+    </h4>
+    <div
+      className="flex justify-around flex-wrap content-start items-start animate__animated animate__fadeIn"
+    >
+      <div
+        className="shadow border-gray-200 m-1 h-auto rounded lg:w-1/5 sm:w1 md:w-1/3 hover: transform-gpu hover:-translate-y-2 ease-linear duration-75 mt-10"
+      >
+        <div
+          className="lg:flex sm:block "
+        >
+          <div
+            className="bg-blue-800  w-100 h-100 rounded-tl rounded-tr"
+          />
+          <img
+            alt="Batman"
+            className="lg:w-1/2 sm:w1 rounded-tl rounded-bl hover:filter hover:grayscale "
+            src="assets/heroes/dc-batman.jpg"
+          />
+          <div
+            className="flex flex-col flex-auto justify-between"
+          >
+            <div
+              className="p-2"
+            >
+              <h4
+                className="font-semibold text-lg uppercase "
+              >
+                Batman
+              </h4>
+              <div
+                className="text-gray-800"
+              >
+                Bruce Wayne
+              </div>
+              <small
+                className="text-gray-500"
+              >
+                Detective Comics #27
+              </small>
+            </div>
+            <a
+              className="p-2 w-auto bg-gray-100 rounded-br  text-red-700 font-semibold hover:bg-red-900 hover:text-white relative bottom-0"
+              href="/heroe/dc-batman"
+              onClick={[Function]}
+            >
+              Ver más
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
