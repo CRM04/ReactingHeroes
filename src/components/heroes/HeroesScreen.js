@@ -2,10 +2,13 @@ import React, { useMemo } from 'react'
 import { Redirect, useParams } from 'react-router'
 import { getHeroById } from '../../selector/getHeroById';
 
+const heroesPath = require.context('../../assets/heroes/', true);
+
 const HeroesScreen = ({ history }) => {
     const { heroeId } = useParams();
+    // console.log(heroesPath(`./${heroeId}.jpg`).default)
     const hero = useMemo(() => getHeroById(heroeId), [heroeId]);
-
+    
     // console.log(hero);
     if (!hero) {
         return <Redirect to='/'></Redirect>
@@ -37,7 +40,7 @@ const HeroesScreen = ({ history }) => {
         <div className="flex justify-center" >
             <div className="w-3/4 rounded flex justify-center shadow" style={backIMG} >
                 <div className="w-1/2 absolute top-48 flex hover:transform-gpu hover:-translate-y-102 ease-linear duration-75 bg-white m-2 rounded shadow">
-                    <img src={`../assets/heroes/${heroeId}.jpg`} className="w-1/6 rounded m-3 shadow animate__animated animate__flipInX" alt="Hero" />
+                    <img src={ heroesPath(`./${heroeId}.jpg`).default } className="w-1/6 rounded m-3 shadow animate__animated animate__flipInX" alt="Hero" />
                     <div className=" h-1/3 p-5 rounded m-3">
                         <h4 className="font-semibold uppercase text-xl">
                             {

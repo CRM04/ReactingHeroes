@@ -4,6 +4,7 @@ import { Transition } from "@headlessui/react";
 import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../../auth/AuthContext';
 import { types } from '../../types/types';
+import icon from '../../assets/heroes/logo.png';
 
 export const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
@@ -26,7 +27,7 @@ export const Navbar = () => {
                             <div className="">
                                 <img
                                     className="h-14 w-auto"
-                                    src="../assets/heroes/logo.png"
+                                    src={icon}
                                     alt="Workflow"
                                 />
                             </div>
@@ -138,7 +139,7 @@ export const Navbar = () => {
                                     to="/marvel"
                                 >
                                     Marvel
-                                    </NavLink>
+                                </NavLink>
 
                                 <NavLink
                                     activeClassName="bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -147,7 +148,7 @@ export const Navbar = () => {
                                     to="/dc"
                                 >
                                     DC
-                                    </NavLink>
+                                </NavLink>
 
                                 <NavLink
                                     activeClassName="bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -156,13 +157,13 @@ export const Navbar = () => {
                                     to="/search"
                                 >
                                     Search
-                                    </NavLink>
+                                </NavLink>
                                 <button
                                     className="hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
                                     onClick={handleLogOut}
                                 >
                                     Logout
-                                    </button>
+                                </button>
                                 <p className="hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium" id="username">
                                     {user.name}
                                 </p>
